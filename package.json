@@ -1,0 +1,28 @@
+{
+    "name":    "entrails",
+    "version": "0.0.0",
+    "description": "Transforms JS code so that local variables are attached to return values, thus making it easier to test code that would otherwise be hidden inside functions.",
+    "keywords": [],
+    "license": "MIT",
+    "author":  "wovenslosh <wovenslosh@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/wovenslosh/entrails.git"
+    },
+    "bin": {},
+    "scripts": {
+        "test": "node test/entrails-test.js"
+    },
+    "main": "./lib/entrails",
+    "dependencies": {
+        "esprima":    "1.0.x",
+        "estraverse": "0.0.4"
+    },
+    "devDependencies": {
+        "vows": "0.7.x"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}
