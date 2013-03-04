@@ -9,20 +9,16 @@
         "type": "git",
         "url":  "https://github.com/wovenslosh/entrails.git"
     },
-    "bin": {},
+    "main": "./lib/entrails",
+    "bin": "./bin/entrails.js",
     "scripts": {
         "test": "node test/entrails-test.js"
     },
-    "main": "./lib/entrails",
     "dependencies": {
         "esprima":    "1.0.x",
         "estraverse": "0.0.4"
     },
     "devDependencies": {
         "vows": "0.7.x"
-    },
-    "optionalDependencies": {},
-    "engines": {
-        "node": "*"
     }
 }
