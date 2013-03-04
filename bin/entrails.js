@@ -5,12 +5,12 @@ var fs       = require('fs'),
 
 (function(args) {
     var main = function(args) {
-        if (args.length < 2) {
+        if (args.length < 1) {
             die('too few arguments');
-        } else if (args.length > 2) {
+        } else if (args.length > 1) {
             die('too many arguments');
         } else {
-            transformFile(args[1]);
+            transformFile(args[0]);
         }
     };
 
@@ -36,5 +36,4 @@ var fs       = require('fs'),
     };
 
     main(args);
-})(process.argv.slice(1));
-
+})(process.argv.slice(2));
