@@ -15,8 +15,9 @@
         "test": "node test/entrails-test.js"
     },
     "dependencies": {
-        "esprima":    "1.0.x",
-        "estraverse": "0.0.4"
+        "esprima":     "1.0.x",
+        "estraverse":  "0.0.4",
+        "promised-io": "0.3.x"
     },
     "devDependencies": {
         "vows": "0.7.x"

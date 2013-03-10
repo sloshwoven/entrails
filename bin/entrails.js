@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 var fs       = require('fs'),
-    entrails = require('entrails');
+    entrails = require('entrails'),
+    promFs   = require('promised-io/fs');
 
 (function(args) {
     var main = function(args) {
@@ -15,18 +16,14 @@ var fs       = require('fs'),
     };
 
     var transformFile = function(path) {
-        fs.exists(path, function(exists) {
-            if (exists) {
-                fs.readFile(path, function(err, code) {
-                    if (err) {
-                        throw err;
-                    }
-
-                    console.log(entrails.transform(code));
-                });
-            } else {
-                die(path + ' does not exist');
-            }
+        return promFs.exists(path).then(function() {
+            die(path + ' does not exist');
+        }, function() {
+            promFs.readFile(path).then(function(code) {
+                console.log(entrails.transform(code));
+            }, function(err) {
+                die('cannot read ' + path + ': ' + err);
+            });
         });
     };
 
