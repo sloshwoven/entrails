@@ -4,7 +4,7 @@
     "description": "Transforms JS code so that local variables are attached to return values, thus making it easier to test code that would otherwise be hidden inside functions.",
     "keywords": [],
     "license": "MIT",
-    "author":  "wovenslosh <wovenslosh@gmail.com>",
+    "author":  "sloshwoven <slosh.woven@gmail.com>",
     "repository": {
         "type": "git",
         "url":  "https://github.com/wovenslosh/entrails.git"
